@@ -18,8 +18,8 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
 
-      - name: Binary generated
+      - name: Upload Binary generated
         uses: actions/upload-artifact@v2
         with:
-          name: helloWorld
-          path: /helloWorld
+          name: my-artifact
+          path: ${{ github.workspace }}/helloWorld          
