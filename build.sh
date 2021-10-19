@@ -1,5 +1,6 @@
 #!/bin/bash
 
-echo "Building Hello"
+echo "Building HelloWorld in"
+echo $PWD
 gcc -o helloWorld hello.c
 
