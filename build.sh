@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Building Hello"
-gcc -o hello hello.c
+gcc -o helloWorld hello.c
 
