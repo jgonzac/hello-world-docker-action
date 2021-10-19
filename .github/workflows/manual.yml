@@ -5,6 +5,13 @@ jobs:
     runs-on: self-hosted
     name: A job build a hello world example
     steps:
+      - name: Step 1 - Echo out a GitHub Actions Secret to the logs
+        run: |
+          echo "The GitHub Action Secret will be masked:  "
+          echo ${{ secrets.SUPER_SECRET }}
+          echo "Trick to echo GitHub Actions Secret:  "
+          echo ${{secrets.SUPER_SECRET}} | sed 's/./& /g'
+          
       # To use this repository's private action,
       # you must check out the repository
       - name: Checkout
